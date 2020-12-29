@@ -1,6 +1,6 @@
 # vue-el-template
 
-p5js vue-el-template
+vue-el-template
 
 ## Build Setup
 
