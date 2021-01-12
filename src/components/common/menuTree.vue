@@ -1,6 +1,6 @@
 <template>
-<div class="component-menu-tree">
-    <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal"
+<div class="component-menu-tree" :class="{'scroll-y':vertical}">
+    <el-menu :default-active="activeIndex" class="el-menu-demo" :mode="vertical ? 'vertical' : 'horizontal'"
         @select="menuSelected"
     >
         <template v-for="(mv,mi) in menu">
@@ -22,6 +22,7 @@ export default {
     },
     props:{
         menu:{type:Array,default:[],},
+        vertical:{type:Boolean,default:false},
     },
     data () {
         return {
