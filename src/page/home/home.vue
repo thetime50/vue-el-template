@@ -18,6 +18,7 @@ export default {
 
 <style rel="stylesheet/scss" lang="scss" scoped>
 .component-home{
+    text-align: center;
     font-size: 60px;
 }
 </style>

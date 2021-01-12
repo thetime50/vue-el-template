@@ -22,12 +22,6 @@ export default {
 <style rel="stylesheet/scss" lang="scss" scoped>
 $back:#424242;
 .component-demo2{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto;//.class1 .class2
-    >*{
-        min-width: 0;
-        min-height: 0;
-    }
+    text-align: center;
 }
 </style>
