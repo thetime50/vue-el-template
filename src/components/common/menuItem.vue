@@ -1,21 +1,21 @@
 <template>
-<li class="component-menu-item  el-menu-item">
-    <el-menu-item v-if="!menu.children"
-        :index="menu.id"
-        :route="route">
-        {{menu.title}}
-    </el-menu-item>
-    <el-submenu v-else
-        :index="menu.id">
-        <template slot="title">{{menu.title}}</template>
+<el-menu-item v-if="!menu.children"
+    class="component-menu-item"
+    :index="menu.id"
+    :route="route">
+    {{menu.title}}
+</el-menu-item>
+<el-submenu v-else
+    class="component-menu-item"
+    :index="menu.id">
+    <template slot="title">{{menu.title}}</template>
 
-        <template v-for="(mv,mi) in menu.children">
-            <menu-item :menu="mv" 
-                :path="path.concat([mv])" 
-                :ipath="ipath.concat([mi])"/>
-        </template>
-    </el-submenu>
-</li>
+    <template v-for="(mv,mi) in menu.children">
+        <menu-item :menu="mv" 
+            :path="path.concat([mv])" 
+            :ipath="ipath.concat([mi])"/>
+    </template>
+</el-submenu>
 </template>
 
 <script>

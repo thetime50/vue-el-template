@@ -1,13 +1,14 @@
 <template>
-<div class="component-menu-tree" :class="{'scroll-y':vertical}">
-    <el-menu :default-active="activeIndex" class="el-menu-demo" :mode="vertical ? 'vertical' : 'horizontal'"
+<el-scrollbar class="component-menu-tree" :class="{vertical}" wrapStyle="overflow-x:auto;">
+    <el-menu
+        :default-active="activeIndex" :mode="vertical ? 'vertical' : 'horizontal'"
         @select="menuSelected"
     >
         <template v-for="(mv,mi) in menu">
             <menu-item :menu="mv" :path="[mv]" :ipath="[mi]"/>
         </template>
     </el-menu>
-</div>
+</el-scrollbar>
 </template>
 
 <script>
@@ -74,6 +75,14 @@ export default {
 
 <style rel="stylesheet/scss" lang="scss" scoped>
 .component-menu-tree{
-    
+    /deep/ .el-scrollbar__view{
+        min-height: 100%;
+    }
+    .el-menu{
+        min-height: 100%;
+    }
+    &.vertical .component-menu-item{
+        margin-right: 8px;
+    }
 }
 </style>
