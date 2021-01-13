@@ -64,11 +64,11 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      },
-      {
-        test: /\.scss$/,
-        loaders: ['style', 'css', 'sass']
-      }
+          },
+    //   { //这样配置js里面无法引入sass
+    //     test: /\.scss$/,
+    //     loaders: ['style', 'css', 'sass']
+    //   }
     ]
   },
   node: {
