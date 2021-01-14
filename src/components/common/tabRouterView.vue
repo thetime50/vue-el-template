@@ -46,7 +46,10 @@ export default {
                 let path = this.routeInfo.path.split('/')
                 let base = path.slice(0,this.deep)
                 let currentPath = path[this.deep]
-                this.$router.push(base.concat(val).join('/'))
+                let dest = base.concat(val).join('/')
+                if(this.routeInfo.path.slice(dest.lenght)!=dest){
+                    this.$router.push(base.concat(val).join('/'))
+                }
             },
         },
     },
