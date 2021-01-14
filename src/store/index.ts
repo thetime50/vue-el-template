@@ -8,6 +8,8 @@ const state = {
     token: window.sessionStorage.getItem('token'),
     username: '',
     uid:'',
+
+    routeInfo: null,
 };
 
 const mutations = {
@@ -40,6 +42,11 @@ const mutations = {
         window.sessionStorage.setItem('token', data.token);
         state.uid = data.uid;
         window.sessionStorage.setItem('uid', data.uid);
+    },
+
+
+    SET_ROUTE_INFO: (state, res) => {
+        state.routeInfo = res;
     },
 };
 
