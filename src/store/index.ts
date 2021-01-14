@@ -44,21 +44,22 @@ const mutations = {
 };
 
 const actions = {
-    UserLogin({ commit }, data){
-        commit('LOGIN', data);
-    },
-    UserLogout({ commit }){
-        commit('LOGOUT');
-    },
-    UserName({ commit }, data){
-        commit('USERNAME', data);
-    },
-    Uid({ commit }, data){
-        commit('UID', data);
-    },
-    UserInfo({ commit }, data){
-        commit('USERINFO', data);
-    },
+    // UserLogin({ commit }, data){
+    //     // ...api或其他异步操作
+    //     commit('LOGIN', data);
+    // },
+    // UserLogout({ commit }){
+    //     commit('LOGOUT');
+    // },
+    // UserName({ commit }, data){
+    //     commit('USERNAME', data);
+    // },
+    // Uid({ commit }, data){
+    //     commit('UID', data);
+    // },
+    // UserInfo({ commit }, data){
+    //     commit('USERINFO', data);
+    // },
 };
 
 export default new Vuex.Store({
