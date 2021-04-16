@@ -17,6 +17,9 @@ import './js/directives.js'
 import promise from 'es6-promise'
 promise.polyfill();
 
+import '@/js/elementPlus.js'
+
+
 Vue.use(ElementUI);
 
 ////////////////////////////////////////////////////////////////
